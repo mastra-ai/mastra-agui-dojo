@@ -7,15 +7,19 @@ import {
 
 import { NextRequest } from "next/server";
 
-const mastra = new MastraClient({
-  baseUrl: 'http://localhost:4111',
-});
+
 
 export const POST = async (req: NextRequest) => {
   // Clone the request before reading the body
   const clonedReq = req.clone();
   const body = await clonedReq.json()
   const resourceId = body.resourceId || "TEST"
+
+
+  const mastra = new MastraClient({
+    baseUrl: 'http://localhost:4111',
+  });
+
   const mastraAgents = await mastra.getAGUI({
     resourceId,
   })

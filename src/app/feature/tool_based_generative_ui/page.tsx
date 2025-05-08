@@ -11,7 +11,7 @@ export default function AgenticChat() {
       runtimeUrl="/api/copilotkit"
       showDevConsole={false}
       // agent lock to the relevant agent
-      agent="toolBasedGenerativeUIAgent"
+      agent="agenticChatAgent"
     >
       <div
         className="min-h-full w-full flex items-center justify-center"

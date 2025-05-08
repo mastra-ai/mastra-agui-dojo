@@ -27,13 +27,13 @@ const config: DemoConfig[] = [
     description: "Chat with your Copilot and call frontend tools",
     tags: ["Chat", "Tools", "Streaming"],
   }),
-  // createDemoConfig({
-  //   id: "human_in_the_loop",
-  //   name: "Human in the loop",
-  //   description:
-  //     "Plan a task together and direct the Copilot to take the right steps",
-  //   tags: ["HITL", "Interactivity"],
-  // }),
+  createDemoConfig({
+    id: "human_in_the_loop",
+    name: "Human in the loop",
+    description:
+      "Plan a task together and direct the Copilot to take the right steps",
+    tags: ["HITL", "Interactivity"],
+  }),
   // createDemoConfig({
   //   id: "agentic_generative_ui",
   //   name: "Agentic Generative UI",
@@ -41,12 +41,12 @@ const config: DemoConfig[] = [
   //     "Assign a long running task to your Copilot and see how it performs!",
   //   tags: ["Generative ui (agent)", "Long running task"],
   // }),
-  // createDemoConfig({
-  //   id: "tool_based_generative_ui",
-  //   name: "Tool Based Generative UI",
-  //   description: "Haiku generator that uses tool based generative UI.",
-  //   tags: ["Generative ui (action)", "Tools"],
-  // }),
+  createDemoConfig({
+    id: "tool_based_generative_ui",
+    name: "Tool Based Generative UI",
+    description: "Haiku generator that uses tool based generative UI.",
+    tags: ["Generative ui (action)", "Tools"],
+  }),
   // createDemoConfig({
   //   id: "shared_state",
   //   name: "Shared State between agent and UI",

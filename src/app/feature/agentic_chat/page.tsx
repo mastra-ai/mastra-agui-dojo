@@ -38,10 +38,27 @@ const Chat = () => {
         description: "The background. Prefer gradients.",
       },
     ],
-    handler: ({ background }) => {
-      console.log("Changing background to", background);
-      setBackground(background);
-    },
+    renderAndWaitForResponse: (context) => {
+      if (context.status === "executing") {
+        return (
+          <button onClick={() => {
+            setBackground(context.args.background);
+            context.respond('SUH DUDE')
+          }}>Resume</button>
+        )
+      }
+      console.log(context)
+      // const ingredients = args?.ingredients || []
+      return (
+        <div>
+          <h3>Did something</h3>
+          {/* <ul>
+                  {ingredients.map((ingredient: string) => <li key={ingredient}>{ingredient}</li>)}
+              </ul> */}
+        </div>
+      )
+    }
+
     // followUp: false,
   });
 

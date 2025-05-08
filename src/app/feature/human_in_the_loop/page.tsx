@@ -11,7 +11,7 @@ const HumanInTheLoop: React.FC = () => {
       runtimeUrl="/api/copilotkit"
       showDevConsole={false}
       // agent lock to the relevant agent
-      agent="humanInTheLoopAgent"
+      agent="agenticChatAgent"
     >
       <Chat />
     </CopilotKit>
@@ -91,9 +91,9 @@ const StepsFeedback = ({
       prevSteps.map((step, i) =>
         i === index
           ? {
-              ...step,
-              status: step.status === "enabled" ? "disabled" : "enabled",
-            }
+            ...step,
+            status: step.status === "enabled" ? "disabled" : "enabled",
+          }
           : step
       )
     );
@@ -131,7 +131,7 @@ const StepsFeedback = ({
                 .map((step) => step.description);
               respond(
                 "The user selected the following steps: " +
-                  selectedSteps.join(", ")
+                selectedSteps.join(", ")
               );
             }}
           >
