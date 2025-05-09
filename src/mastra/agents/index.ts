@@ -19,14 +19,14 @@ export const agenticChatAgent = new Agent({
       1. You MUST call the 'changeBackgroundTool' function when the user asks you to change the background color of the chat window.
 `,
     model: openai("gpt-4o"),
-    memory: new Memory({
-        options: {
-            workingMemory: {
-                enabled: true,
-                template: `
-                    This is a scratchpad for you to keep track of what the user has asked you to remember.
-                `
-            }
-        }
-    }),
+    // memory: new Memory({
+    //     options: {
+    //         workingMemory: {
+    //             enabled: true,
+    //             template: `
+    //                 This is a scratchpad for you to keep track of what the user has asked you to remember.
+    //             `
+    //         }
+    //     }
+    // }),
 });
